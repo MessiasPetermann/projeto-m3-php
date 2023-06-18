@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tarefas Já - Gerenciador de Tarefas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerenciador de Tarefas</h1>
+    <form id="addTaskForm">
+      <div class="mb-3">
+        <label for="taskTitle" class="form-label">Título:</label>
+        <input type="text" class="form-control" id="taskTitle" required>
+      </div>
+      <div class="mb-3">
+        <label for="taskDescription" class="form-label">Descrição:</label>
+        <textarea class="form-control" id="taskDescription"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="taskDueDate" class="form-label">Data de Conclusão:</label>
+        <input type="date" class="form-control" id="taskDueDate" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Adicionar Tarefa</button>
+    </form>
+    <table class="table mt-4">
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Descrição</th>
+          <th>Data de Criação</th>
+          <th>Data de Conclusão</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="taskList">
+        <!-- Tarefas serão adicionadas dinamicamente aqui -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
